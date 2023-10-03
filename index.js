@@ -26,7 +26,7 @@ app.use(express.json());
  //create a route to get single post
   app.get('/posts/:id', async (req,res)=>{
     const id= req.params.id;
-    const post = await Post.findById(IDRequest);
+    const post = await Post.findById(id);
     res.send(post);
   });
   // create a route for creating a post
